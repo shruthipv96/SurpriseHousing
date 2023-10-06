@@ -1,52 +1,72 @@
-# Project Name
-> Outline a brief description of your project.
-
+# Sale Price of House Case Study
+---
+## Case study assignment by IIIT Bangalore and Upgrad
+---
+> - Solving this assignment will give an idea of analysing the dataset and build a model to predict the variable of interest. Here, the interest is to predict the sale price of house based on few other parameters.
+> - Developed as part of the Advanced Linear Regression Module required for Executive Post Graduate Program in Machine Learning and AI - IIIT,Bangalore.
+---
 
 ## Table of Contents
-* [General Info](#general-information)
-* [Technologies Used](#technologies-used)
+* [General Information](#general-information)
+* [Methodology](#methodology)
+* [Repository contents](#repository-contents)
 * [Conclusions](#conclusions)
-* [Acknowledgements](#acknowledgements)
-
-<!-- You can include any other section that is pertinent to your problem -->
 
 ## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+A US-based housing company named **Surprise Housing** has decided to enter the Australian market. The company uses data analytics to purchase houses at a price below their actual values and flip them on at a higher price. For the same purpose, the company has collected a data set from the sale of houses in Australia
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+**The company wants to know:**
+- Which variables are significant in predicting the price of a house.
+- How well those variables describe the price of a house.
+  
+**Objective:**
+The company is looking at prospective properties to buy to enter the market. It is required to build a regression model using regularisation in order to predict the actual value of the prospective properties and decide whether to invest in them or not.
+
+## Methodology
+1) Reading and Understanding the Data
+2) Data manipulation and cleaning
+3) Visualising the Data
+4) Data Preparation
+5) Splitting the Data into Training and Testing Sets
+6) Building model
+
+## Repository contents
+| File | Description |
+|:-----|:------------|
+| Python notebook | It contains the complete detailed code along with necessary output to solve the problem|
+| PDF | Answered the asked subjective questions. |
+| README.md | This file briefs about the project. |
+| train.csv | The sale price of house case study data set. |
+| data definition.txt | Meaning of the variables in the dataset. |
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
+Metrics obtained using Ridge and Lasso regression models are:
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+| Metric |	Ridge Regression |	Lasso Regression |
+|:-------|:------------------|:------------------|
+| R2 Score (Train) |	0.906306 |	0.909805 |
+| R2 Score (Test) |	0.892148 |	0.901734 |
+| RMSE (Train) |	0.033440 |	0.032810 |
+| RMSE (Test)	| 0.034280 |	0.032721 |
 
+- From the analysis, it is evident that both the models have R2 score of same around 0.90 for both train and test data and RMSE value is same around 0.033 for both train and test data, so it is better to select a model which is simple.
+- In that terms, lasso model does better job since it does feature selection which resulted in 132 features whereas ridge model has 278 features which is 146 features more than lasso model.
 
-## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
+Top features in rank order from lasso model are :
+- GrLivArea
+- OverallQual
+- TotalBsmtSF
+- Neighborhood
+- GarageQual
+- OverallCond
+- TotRmsAbvGrd
+- KitchenQual
+- ExterQual
+- LotArea
+- GarageCars
+- BsmtQual
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
+Also, all the above features have a positive correlation with the Sale Price.
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by @shruthipv96 - feel free to contact me!
