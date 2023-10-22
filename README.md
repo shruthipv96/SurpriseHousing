@@ -44,29 +44,34 @@ Metrics obtained using Ridge and Lasso regression models are:
 
 | Metric |	Ridge Regression |	Lasso Regression |
 |:-------|:------------------|:------------------|
-| R2 Score (Train) |	0.906306 |	0.909805 |
-| R2 Score (Test) |	0.892148 |	0.901734 |
-| RMSE (Train) |	0.033440 |	0.032810 |
-| RMSE (Test)	| 0.034280 |	0.032721 |
+| R2 Score (Train) |0.938550 |	0.931790 |
+| R2 Score (Test) |	0.897946 |	0.910902 |
+| RMSE (Train) |	0.032111 |	0.033831 |
+| RMSE (Test)	| 0.040918 |	0.038232 |
 
-- From the analysis, it is evident that both the models have R2 score of same around 0.90 for both train and test data and RMSE value is same around 0.033 for both train and test data, so it is better to select a model which is simple.
-- In that terms, lasso model does better job since it does feature selection which resulted in 132 features whereas ridge model has 278 features which is 146 features more than lasso model.
+- Since it is evident that both the models *R2 score* is same around **0.93** for train data and same around **0.90** for test data and *RMSE value* is same around **0.033** for train data and same around **0.038** for test data, it is better to select a model which is **simple**.
+- In that terms, **lasso model** does better job since it does feature selection which resulted in *123 features* whereas ridge model has *298 features* which is 175 features more than lasso model.
 
-Top features in rank order from lasso model are :
-- GrLivArea
-- OverallQual
-- TotalBsmtSF
-- Neighborhood
-- GarageQual
-- OverallCond
-- TotRmsAbvGrd
-- KitchenQual
-- ExterQual
-- LotArea
-- GarageCars
-- BsmtQual
+Top features in *rank order* from **lasso** model are :
+> - GrLivArea
+> - OverallQual
+> - Total_floor_SF
+> - OverallCond
+> - TotalBsmtSF
+> - GarageArea
+> - Neighborhood
+> - Total_Bathrooms
+> - LotArea
+> - GarageCars
+> - Fireplaces
+> - Total_porch_sf
+> - TotRmsAbvGrd
+> - SaleType
+> - Exterior1st_BrkFace
+> - BsmtQual
+> - Functional
 
-Also, all the above features have a positive correlation with the Sale Price.
+Also, all the above features have a *positive correlation* with the Sale Price.
 
 ## Contact
 Created by @shruthipv96 - feel free to contact me!
